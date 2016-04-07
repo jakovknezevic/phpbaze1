@@ -27,9 +27,12 @@
 
     $conn->query("DELETE FROM automobili WHERE id=".$_POST['Id']);
 
+
+    header("Location: brisanje.php");
+
     ?>
 
 </p>
-    <a href="index.php">Ponovni unos</a>
+    <a href="index.php">Povratak na proslu stranicu</a>
 </body>
 </html>

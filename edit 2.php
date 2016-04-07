@@ -2,23 +2,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Unos</title>
+    <title>Izmjena</title>
 </head>
 
 <body>
 <h1>
-    Unos
+    Izmjena
 </h1>
+<?php
+ $sql = "SELECT registracija, ime FROM automobili WHERE Id=" .$_POST['Id'];
+ $result = $conn->query($sql);
+ if ($result->num_rows > 0) {
+     $auto = $result->fetch_assoc();
 
+ }
+else {
+    echo('nema auta');
+}
+
+
+?>
 <p>
-<form method="post" action="insert.php">
+<form method="post" action="edit_code.php">
     Registracija:<br>
-    <input type="text" name="Registracija"><br>
+    <input type="text" name="Registracija" value="<?php echo($auto['registracija']); ?>"><br>
     Ime:<br>
-    <input type="text" name="Ime"><br><br>
+    <input type="text" name="Ime" value="<?php echo($auto['ime']); ?>"><br><br>
 
     <input type="submit" value="Submit"><br><br>
-
 </form>
 
 
@@ -43,6 +54,14 @@ if ($result->num_rows > 0) {
     echo "Nema automobila";
 }
 $conn->close();
+
+?>
+
+<?php
+    $conn->query("SELECT id FROM automobili WHERE id=".$_POST['Id'])
+
+
+
 
 ?>
 

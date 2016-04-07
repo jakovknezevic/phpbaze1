@@ -2,23 +2,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Unos</title>
+    <title>Izmjena</title>
 </head>
 
 <body>
 <h1>
-    Unos
+    Izmjena
 </h1>
 
 <p>
-<form method="post" action="insert.php">
-    Registracija:<br>
-    <input type="text" name="Registracija"><br>
-    Ime:<br>
-    <input type="text" name="Ime"><br><br>
+<form method="post" action="edit 2.php">
+    Id:<br>
+    <input type="text" name="Id"><br>
 
     <input type="submit" value="Submit"><br><br>
-
 </form>
 
 
@@ -43,6 +40,12 @@ if ($result->num_rows > 0) {
     echo "Nema automobila";
 }
 $conn->close();
+
+?>
+
+<?php
+    $conn->query("SELECT id FROM automobili WHERE id=".$_POST['Id'])
+
 
 ?>
 

@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Insert</title>
+    <title>Unos</title>
 </head>
 
 <body>
@@ -15,7 +15,8 @@
     $conn->query("INSERT INTO automobili (Ime, Registracija) VALUES ('" . $_POST['Ime'] ."','" . $_POST['Registracija'] ."');");
 
     ?>
-    <a href="index.php">Ponovni unos</a>
+
 </p>
+    <a href="index.php">Povratak na proslu stranicu</a>
 </body>
 </html>
