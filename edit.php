@@ -44,7 +44,7 @@ $conn->close();
 ?>
 
 <?php
-    $conn->query("SELECT id FROM automobili WHERE id=".$_POST['Id'])
+    $conn->query("SELECT Id FROM automobili WHERE Id=".$_POST['Id'])
 
 
 ?>

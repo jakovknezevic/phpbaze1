@@ -11,14 +11,21 @@
 
 <p>
     <?php
+    $sql = "UPDATE automobili SET registracija='" . $_POST['Registracija'] ."', ime='" . $_POST['Ime'] ."' WHERE Id=" .$_POST['Id'];
+    $conn->query($sql);
 
-    $conn->query("UPDATE automobili SET registracija='" . $_POST['Registracija'] ."', ime='" . $_POST['Ime'] ."' WHERE Id=" .$_POST['Id']);
+    echo($sql);
 
-
-
-    header("Location: edit.php");
+    //header("Location: edit.php");
     ?>
 
+    <?php
+    $conn->query("SELECT Id FROM automobili WHERE Id=".$_POST['Id'])
+
+
+
+
+    ?>
 
 
 

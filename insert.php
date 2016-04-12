@@ -12,7 +12,7 @@
 <p>
     <?php
 
-    $conn->query("INSERT INTO automobili (Ime, Registracija) VALUES ('" . $_POST['Ime'] ."','" . $_POST['Registracija'] ."');");
+    $conn->query("INSERT INTO automobili (ime, registracija) VALUES ('" . $_POST['Ime'] ."','" . $_POST['Registracija'] ."');");
 
     ?>
 
