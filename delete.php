@@ -33,6 +33,6 @@
     ?>
 
 </p>
-    <a href="index.php">Povratak na proslu stranicu</a>
+
 </body>
 </html>

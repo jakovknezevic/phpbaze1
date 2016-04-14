@@ -22,6 +22,7 @@
 </form>
 
 
+
 <?php
 
 $sql = "SELECT id, registracija, ime FROM automobili";
@@ -47,6 +48,10 @@ $conn->close();
 ?>
 
 </p>
-    <a href="index.php">Povratak na proslu stranicu</a>
+
+<form action="index.php">
+    <input type="submit" value="Go back to the beginning"><br><br>
+</form>
+
 </body>
 </html>

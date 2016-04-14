@@ -11,13 +11,6 @@
 </h1>
 
 <p>
-<form method="post" action="edit 2.php">
-    Id:<br>
-    <input type="text" name="Id"><br>
-
-    <input type="submit" value="Submit"><br><br>
-</form>
-
 
 <?php
 
@@ -32,10 +25,12 @@ if ($result->num_rows > 0) {
         echo('<td>' . $row['id'] . '</td>');
         echo('<td>' . $row['registracija'] . '</td>');
         echo('<td>' . $row['ime'] . '</td>');
+        echo('<td>'. '<a href="edit 2.php?Iden=' .$row['id'] .'"><img src="edit.png"</a>'. '</td>');
         echo('</tr>');
 
     }
     echo('</table>');
+    echo('<br>');
 } else {
     echo "Nema automobila";
 }
@@ -44,12 +39,16 @@ $conn->close();
 ?>
 
 <?php
-    $conn->query("SELECT Id FROM automobili WHERE Id=".$_POST['Id'])
+    $conn->query("SELECT id FROM automobili WHERE id=".$_POST['Id'])
 
 
 ?>
 
+<form action="index.php">
+    <input type="submit" value="Go back to the beginning"><br><br>
+</form>
+
 </p>
-    <a href="index.php">Povratak na proslu stranicu</a>
+
 </body>
 </html>

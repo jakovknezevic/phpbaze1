@@ -13,8 +13,17 @@
 <p>
 
 </p>
-    <a href="unos.php">Unos automobila</a><br><br>
-    <a href="edit.php">Uredivanje automobila</a><br><br>
-    <a href="brisanje.php">Brisanje automobila</a><br>
+<form action="unos.php">
+    <input type="submit" value="Go to input"><br><br>
+</form>
+
+<form action="edit.php">
+    <input type="submit" value="Go to edit"><br><br>
+</form>
+
+<form action="brisanje.php">
+    <input type="submit" value="Go to delete">
+</form>
+
 </body>
 </html>

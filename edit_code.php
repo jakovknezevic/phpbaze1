@@ -11,25 +11,21 @@
 
 <p>
     <?php
-    $sql = "UPDATE automobili SET registracija='" . $_POST['Registracija'] ."', ime='" . $_POST['Ime'] ."' WHERE Id=" .$_POST['Id'];
+    $sql = "UPDATE automobili SET registracija='" . $_POST['Registracija'] ."', ime='" . $_POST['Ime'] ."' WHERE id=" .$_POST['Iden'];
     $conn->query($sql);
 
-    echo($sql);
+    //echo($sql);
 
-    //header("Location: edit.php");
+    header("Location: edit.php");
     ?>
 
     <?php
-    $conn->query("SELECT Id FROM automobili WHERE Id=".$_POST['Id'])
-
-
-
-
+    $conn->query("SELECT id FROM automobili WHERE id=".$_POST['Iden'])
     ?>
 
 
 
 </p>
-    <a href="index.php">Povratak na proslu stranicu</a>
+
 </body>
 </html>
