@@ -4,6 +4,12 @@
 <head>
     <title>Vozni Park</title>
 </head>
+<style>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+
+</style>
+
 
 <body>
 <h1>
